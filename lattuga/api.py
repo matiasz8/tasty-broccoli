@@ -1,7 +1,7 @@
 from tastypie.resources import ModelResource
 from tastypie.constants import ALL
 
-from mercurio.models import Book
+from lattuga.models import Book
 
 
 class BookResource(ModelResource):
