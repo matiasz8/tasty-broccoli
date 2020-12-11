@@ -1,0 +1,14 @@
+
+
+### all with json format
+GET http://localhost:8000/api/book/?format=json 
+
+
+### new send
+
+GET http://localhost:8000/api/book/?format=json&title__contains=Good
+
+### basic
+GET http://localhost:8000/api/book/?format=json&title__contains=Understand&&body__contains=approach
+
+
