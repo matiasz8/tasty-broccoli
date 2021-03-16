@@ -45,6 +45,7 @@ PROJECTS = [
 
 THRID_LIBS = [
     "django_extensions",
+    "tastypie",
 ]
 
 INSTALLED_APPS = FRAMEWORK + PROJECTS + THRID_LIBS

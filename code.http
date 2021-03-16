@@ -1,14 +1,35 @@
 
 
 ### all with json format
-GET http://localhost:8000/api/book/?format=json 
+GET http://localhost:8585/api/book/?format=json 
+Authorization: ApiKey admin:204db7bcfafb2deb7506b89eb3b9b715b09905c8
 
 
-### new send
+### GET Title Contains 
 
-GET http://localhost:8000/api/book/?format=json&title__contains=Good
+GET http://localhost:8585/api/book/?format=json&title__contains=sample
+Authorization: ApiKey admin:204db7bcfafb2deb7506b89eb3b9b715b09905c8
+
 
 ### basic
-GET http://localhost:8000/api/book/?format=json&title__contains=Understand&&body__contains=approach
+GET http://localhost:8585/api/book/?format=json&title__contains=Understand&&body__contains=approach
 
 
+### POST Create
+
+POST http://localhost:8585/api/book/ HTTP/1.1
+content-type: application/json
+Authorization: ApiKey admin:204db7bcfafb2deb7506b89eb3b9b715b09905c8
+
+{
+    "title": "sample5",
+    "body" : "testing5 tastypie api",
+    "created_at": "2020-12-12"
+}
+
+
+### Delete
+
+DELETE http://localhost:8585/api/book/?title=sample5 HTTP/1.1
+content-type: application/json
+Authorization: ApiKey admin:204db7bcfafb2deb7506b89eb3b9b715b09905c8
